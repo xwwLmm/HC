@@ -19,10 +19,13 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
+    /**
+     * 在此设置modules, 会在这些文件夹下找寻文件，直到成功为止
+     */
+    modules: [resolve('src'), 'node_modules'],
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
+      'vue$': 'vue/dist/vue.esm.js'
     }
   },
   module: {
